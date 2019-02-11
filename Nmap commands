@@ -37,3 +37,11 @@ nmap --script=http-headers 192.168.1.0
 Scan for information about IP address
 nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
 
+Cipher test
+nmap -sV --script ssl-enum-ciphers -p 443 <host>
+
+SSL service recognition via nmap
+nmap -sV --reason -PN -n --top-ports 100 www.example.com
+
+Checking for Certificate information, Weak Ciphers and SSLv2 via nmap
+nmap --script ssl-cert,ssl-enum-ciphers -p 443,465,993,995 www.example.com
