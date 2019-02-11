@@ -1,0 +1,39 @@
+
+
+
+Scan an IPs
+nmap 192.168.1.1-20
+
+Scan a range of IPs	
+nmap 192.168.1.1-20
+
+Nmap scan from file
+nmap -iL ip-addresses.txt
+
+Scan a single Port	
+nmap -p 22 192.168.1.1
+
+Scan a range of ports	
+nmap -p 1-100 192.168.1.1
+
+Scan TCP 
+nmap -sT 192.168.1.1
+
+Scan UDP ports	
+nmap -sU -p 123,161,162 192.168.1.1
+
+Scan for O.S. of server
+Enable OS detection, version detection, script scanning, and traceroute
+nmap -A 192.168.1.1
+
+Enable OS detection
+nmap -O 192.168.1.1
+
+nmap -script --osscan-guess 192.168.1.1
+
+Scan for HTTP header
+nmap --script=http-headers 192.168.1.0
+
+Scan for information about IP address
+nmap --script=asn-query,whois,ip-geolocation-maxmind 192.168.1.0/24
+
